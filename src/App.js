@@ -8,6 +8,7 @@ import {Adv} from './pages/Advcourse'
 import {Base} from './pages/Basecourse'
 import {RequireAuth} from "./hoc/RequireAuth";
 import {AuthProvider} from "./hoc/AuthProvider";
+import {Test} from './pages/Test';
 
 const App = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -15,7 +16,9 @@ const App = () => {
     const items = [{value:"Главная", href: '/about', icon: 'home'},
         {value:"Основной курс", href: '/base', icon: 'task_alt'},
         {value:"Продвинутый курс", href: '/adv', icon: 'add_task'},
-        {value:"Авторизация", href: '/auth', icon: 'login'}]
+        {value:"Авторизация", href: '/auth', icon: 'login'},
+        {value:"Тестовая", href: '/test', icon: ''}
+    ]
   return (
       <div className="App">
           <nav>
@@ -25,13 +28,13 @@ const App = () => {
           </nav>
           <header>
               <Menu active={menuActive} setActive={setMenuActive} header={"Меню "} items={items}/>
-          </header>
+                  </header>
           <AuthProvider>
           <Routes>
               <Route path="/about" element={<About />}/>
               <Route path="/base" element={<Base />}/>
               <Route path="/" element={<About />}/>
-
+              <Route path="/test" element={<Test />}/>
               <Route path="/adv" element={
                   <RequireAuth>
                       <Adv />

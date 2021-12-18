@@ -16,7 +16,7 @@ const Auth = () => {
         const user = form.username.value;
       // signin(user, () => navigate(fromPage, {replace: true}));
         signin(user, () => navigate('/about', {replace: true}));
-    }git
+    }
 
     return (
         <div>

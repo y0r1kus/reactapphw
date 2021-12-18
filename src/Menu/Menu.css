@@ -6,6 +6,11 @@
     left: 0;
     transform: translateX(-130%);
     transition: all 0.3s ;
+    z-index: 100;
+}
+
+header {
+    padding: 8px;
 }
 
 h1 {
