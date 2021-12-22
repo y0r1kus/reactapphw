@@ -5,40 +5,40 @@ import './Auth.css';
 import {users} from '../database/user';
 
 const Auth = () => {
-    const navigate = useNavigate();
+   const navigate = useNavigate();
     const {signin} = useAuth();
     const {signout} = useAuth();
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
         const loginForm = form.querySelector('.form__login');
-        const passwordForm =  form.querySelector('.form__password');
+        const passwordForm = form.querySelector('.form__password');
         const dataUser = users;
         const user = form.username.value;
         const password = form.password.value;
-        let userAuth = dataUser.find(item => item.name == user);
-
-        if (user == "") {
+        let userAuth = dataUser.find(el => el.name === user);
+        if (user === "") {
             loginForm.classList.add("empty-input")
-            loginForm.classList.remove("invalid-input")
-        }
-        else {if (user == userAuth.name)
+            loginForm.classList.remove("invalid-input")}
+        else {if (!Boolean(userAuth)) { loginForm.classList.add("invalid-input")
+            loginForm.classList.remove("empty-input")}
+        else {if (user === userAuth.name)
         {loginForm.classList.remove("empty-input")
             loginForm.classList.remove("invalid-input");}
-        else { loginForm.classList.add("invalid-input");
-            loginForm.classList.remove("empty-input");}
-        };
-        if (password == "") {
+        }
+
+        }
+        if (password === "") {
             passwordForm.classList.add("empty-input")
             passwordForm.classList.remove("invalid-input")
         }
-        else {if (password == userAuth.password)
+        else {if (password === userAuth.password)
         {passwordForm.classList.remove("empty-input")
             passwordForm.classList.remove("invalid-input");}
         else { passwordForm.classList.add("invalid-input");
             passwordForm.classList.remove("empty-input");}
 
-        if (password == userAuth.password && user == userAuth.name)
+        if (password === userAuth.password && user === userAuth.name)
         {signin(user, () => navigate('/about', {replace: true}));}
     }}
 
