@@ -2,6 +2,7 @@ import React from 'react';
 import './Menu.css';
 import {Link} from 'react-router-dom';
 
+
 const Menu = ({header, items, active, setActive }) => {
     return (
         <div className={active ? 'menu active' : 'menu'} onClick={() => setActive(false)}>

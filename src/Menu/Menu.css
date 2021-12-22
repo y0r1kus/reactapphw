@@ -1,7 +1,7 @@
 .menu {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     top: 50px;
     left: 0;
     transform: translateX(-130%);
@@ -11,10 +11,6 @@
 
 header {
     padding: 8px;
-}
-
-h1 {
-
 }
 
 .menu.active {
@@ -32,10 +28,10 @@ h1 {
 
 }
 .menu__header {
-    padding: 15px;
+    padding: 22px;
     font-size: 1.75rem;
     color: white;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     width: 100%;
     text-align: center;
 }

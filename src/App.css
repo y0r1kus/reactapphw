@@ -3,20 +3,34 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+h1 {
+  position: fixed;
+  width: 90%;
+  min-width: max-content;
+  left: 80px;
+  z-index: 15;
+  color: #FFFFFF;
+  padding-top: 5px;
+  font-size: 1.9rem;
+  text-align: left;
+
+}
+
 nav {
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: grey;
   position: fixed;
   z-index: 10;
   display: flex;
   align-items: center;
+  border-bottom: #FFFFFF 4px double;
+  border-top: #FFFFFF 4px double;
 }
 header {
   padding: 50px;
-}
-p {
-  margin: 20px;
+
 }
 
 .burger-btn {
@@ -32,8 +46,8 @@ p {
   position: absolute;
   top: 0;
   width: 30px;
-  background-color: black;
-  height: 3px;
+  background-color: white;
+  height: 4px;
 }
 
 .burger-btn span {
@@ -41,8 +55,8 @@ p {
   position: absolute;
   top: 13px;
   width: 30px;
-  background-color: black;
-  height: 3px;
+  background-color: white;
+  height: 4px;
 }
 
 
@@ -51,6 +65,27 @@ p {
   position: absolute;
   bottom: 0;
   width: 30px;
-  background-color: black;
-  height: 3px;
+  background-color: white;
+  height: 4px;
 }
+
+
+footer {
+  position: absolute;
+  top: 90%;
+
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background: #787878;
+  border-bottom: #FFFFFF 8px double;
+  border-top: #FFFFFF 8px double;
+}
+
