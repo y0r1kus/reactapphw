@@ -10,6 +10,7 @@ const LessonCurrent = ({ note, title, body, img, link }) => {
     SwiperCore.use([Navigation, Keyboard]);
     SwiperCore.use([Pagination]);
     SwiperCore.use([EffectFlip]);
+
     return (
         <div className="slider-about__wrapper">
             <span className='slider-about__note'>{note}</span>
@@ -39,7 +40,7 @@ const About = () => {
     const courseSoon = course.slice(2,18);
 
     return (
-        <body className='page'>
+    <body className='page'>
         <h3 className='course-title'>О нашей школе</h3>
         <h5 className='course-current'>Доступные курсы</h5>
         <Swiper
@@ -48,15 +49,7 @@ const About = () => {
             keyboard={{"enabled": true}}
             navigation
             breakpoints={{
-                "640": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 10
-                },
-                "768": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 20
-                }}}
-
+                "1024": {"slidesPerView": 2,"spaceBetween": 20}}}
             grabCursor={true}
         >
             {courseCurrent.map(({id, note, title, body, img, link }) => {
@@ -68,44 +61,23 @@ const About = () => {
 
         <h5 className='course-soon'>Скоро в нашей школе</h5>
         <Swiper
-            slidesPerView={1}
+            slidesPerView={2}
             spaceBetween={0}
             keyboard={{"enabled": true}}
             navigation
             pagination={{"clickable": true, renderBullet: function (index, className)
                 {return '<span class="' + className + '">' + (index+1) + '</span>'}
             }}
-
-                breakpoints={{
-            "640": {
-                "slidesPerView": 2,
-                "spaceBetween": 10
-            },
-            "768": {
-                "slidesPerView": 4,
-                "spaceBetween": 20
-            }
-        }} >
-
-            {courseSoon.map(({id, note, title, body, img , link}) => {
+            breakpoints={{"1024": {"slidesPerView": 4,"spaceBetween": 20}}}
+        >
+        {courseSoon.map(({id, note, title, body, img , link}) => {
                 return  <SwiperSlide>
-                    <LessonSoon key={id} note={note} title={title} body={body} img={img} link={link} />
-                </SwiperSlide>})
+                                <LessonSoon key={id} note={note} title={title} body={body} img={img} link={link} />
+                        </SwiperSlide>})
             };
         </Swiper>
 
-
-
-
-
-
-
-
-
-
-
-
-        </body>
+    </body>
     );
 };
 

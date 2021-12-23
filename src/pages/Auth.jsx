@@ -17,39 +17,25 @@ const Auth = () => {
         const user = form.username.value;
         const password = form.password.value;
         let userAuth = dataUser.find(el => el.name === user);
-        if (user === "") {
-            loginForm.classList.add("empty-input")
-            loginForm.classList.remove("invalid-input")}
-        else {if (!Boolean(userAuth)) { loginForm.classList.add("invalid-input")
-            loginForm.classList.remove("empty-input")}
-        else {if (user === userAuth.name)
-        {loginForm.classList.remove("empty-input")
-            loginForm.classList.remove("invalid-input");}
-        }
-
-        }
-        if (password === "") {
-            passwordForm.classList.add("empty-input")
-            passwordForm.classList.remove("invalid-input")
-        }
-        else {if (password === userAuth.password)
-        {passwordForm.classList.remove("empty-input")
-            passwordForm.classList.remove("invalid-input");}
-        else { passwordForm.classList.add("invalid-input");
-            passwordForm.classList.remove("empty-input");}
-
+        if (user === "") {loginForm.classList.add("empty-input"); loginForm.classList.remove("invalid-input")}
+            else {if (!Boolean(userAuth)) { loginForm.classList.add("invalid-input"); loginForm.classList.remove("empty-input")}
+                    else {if (user === userAuth.name){loginForm.classList.remove("empty-input"); loginForm.classList.remove("invalid-input");}
+                        }
+                }
+        if (password === "") {passwordForm.classList.add("empty-input"); passwordForm.classList.remove("invalid-input")}
+            else {if (password === userAuth.password){passwordForm.classList.remove("empty-input"); passwordForm.classList.remove("invalid-input");}
+                    else { passwordForm.classList.add("invalid-input"); passwordForm.classList.remove("empty-input");}
         if (password === userAuth.password && user === userAuth.name)
         {signin(user, () => navigate('/about', {replace: true}));}
-    }}
+                }
+    }
 
     return (
         <div className="auth_page">
-                 <form className="form" onSubmit={handleSubmit} noValidate>
+                <form className="form" onSubmit={handleSubmit} noValidate>
 
                 <h2 className="form__title"> Авторизация</h2>
-
                 <span className="form__text"> После авторизации у Вас будет доступ ко всем действующим курсам нашей школы</span>
-
 
                 <div className="form__login login-block">
                     <label className="login-block__label asterisk" htmlFor="login-input">Login</label>
@@ -59,23 +45,20 @@ const Auth = () => {
                         <p className="invalid-input">Логин не зарегестрирован</p>
                </div>
 
-                     <div className="form__password password-block">
+                <div className="form__password password-block">
                          <label className="password-block__label asterisk" htmlFor="password-input">Password</label>
                          <input className="password-block__input" type="password" id="password-input"
                                 placeholder="Введите Ваш пароль" name="password"/>
                          <p className="empty-input">Поле обязательно для заполнения</p>
                          <p className="invalid-input">Пароль не верный</p>
-                     </div>
+                </div>
 
                 <div className="form__button button-block">
                 <button className="button-block__button" type="submit" >Вход</button>
                 <button className="button-block__button" onClick={() => signout(() => navigate('/about', {replace: true}))}> Выход</button>
                 </div>
             </form>
-
-
-
-           </div>
+        </div>
     )
 };
 

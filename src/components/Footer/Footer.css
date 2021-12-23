@@ -1,0 +1,22 @@
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+}
+
+.footer {
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 140px;
+    width: 100vw;
+    background: #787878;
+    border-bottom: #FFFFFF 8px double;
+    border-top: #FFFFFF 8px double;
+}
+

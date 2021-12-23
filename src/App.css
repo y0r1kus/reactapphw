@@ -5,7 +5,7 @@
 }
 
 .App{
-  height: 100vmax;
+  height: 100vh;
 }
 h1 {
   position: fixed;
@@ -71,24 +71,4 @@ header {
   height: 4px;
 }
 
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
-}
-
-.footer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 10vmax;
-  background: #787878;
-  border-bottom: #FFFFFF 8px double;
-  border-top: #FFFFFF 8px double;
-}
 

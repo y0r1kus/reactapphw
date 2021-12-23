@@ -109,7 +109,6 @@ div.swiper-button-next, div.swiper-button-prev {
 .slider-about__wrapper {
     margin: 8px auto 0;
     width: 90%;
-
     background: grey;
     border-radius: 36px;
     border: #FFFFFF 8px double;
@@ -139,7 +138,8 @@ div.swiper-button-next, div.swiper-button-prev {
 }
 .slider-about__img {
     display: block;
-    max-width: 35vw;
+    max-width: 30vw;
+    max-height: 20vh;
     padding: 8px;
     margin: 0;
     text-align: justify;
@@ -189,6 +189,7 @@ div.swiper-button-next, div.swiper-button-prev {
 .slider-about__img_soon {
     display: block;
     max-width: 16vw;
+    max-height: 16vh;
     padding: 8px;
     margin: 0;
     text-align: justify;
@@ -198,7 +199,7 @@ div.swiper-button-next, div.swiper-button-prev {
     color: red;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
     .slider-wrapper {
         width: 100%;
