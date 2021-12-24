@@ -54,18 +54,20 @@ export let course = [
     {
         id: 6,
         note: '',
-        title: 'Дебют для продолжающих',
+        title: 'Охотимся на фигуры',
         body: '!!!Скоро появится!!!',
-        img: '../images/new/6.png',
+        img: '../images/new/15.png',
         link: '/'
+
     },
     {
         id: 7,
         note: '',
-        title: 'Эндшпиль для продолжающих',
+        title: 'Форсированная игра',
         body: '!!!Скоро появится!!!',
-        img: '../images/new/7.png',
+        img: '../images/new/16.png',
         link: '/'
+
     },
     {
         id: 8,
@@ -87,7 +89,7 @@ export let course = [
     {
         id: 10,
         note: '',
-        title: 'Тактика для продолжающих',
+        title: 'Тактика',
         body: '!!!Скоро появится!!!',
         img: '../images/new/10.png',
         link: '/'
@@ -127,23 +129,23 @@ export let course = [
     {
         id: 15,
         note: '',
-        title: 'Охотимся на фигуры',
+        title: 'Дебют, продолжение',
         body: '!!!Скоро появится!!!',
-        img: '../images/new/15.png',
+        img: '../images/new/6.png',
         link: '/'
    },
     {
         id: 16,
         note: '',
-        title: 'Форсированная игра',
+        title: 'Эндшпиль, продолжение',
         body: '!!!Скоро появится!!!',
-        img: '../images/new/16.png',
+        img: '../images/new/7.png',
         link: '/'
     },
     {
         id: 17,
         note: '',
-        title: 'Стратегия для продолжающих',
+        title: 'Стратегия, продолжение',
         body: '!!!Скоро появится!!!',
         img: '../images/new/17.png',
         link: '/'
